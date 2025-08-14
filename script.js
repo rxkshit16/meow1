@@ -3,12 +3,18 @@ const candle = document.getElementById('candle');
 
 candle.addEventListener('click', () => {
   clickCount++;
-  if (clickCount === 3)
-    confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
+
+  if (clickCount === 3) {
+    // Launch confetti
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+
+    // Redirect after short delay
     setTimeout(() => {
-      if (confirm("🎁 Click OK for another surprise!")) {
-        window.location.href = "https://hbd-meow.netlify.app";
-      }
-    }, 1200);
+      window.location.href = "https://hbd-meow.netlify.app";
+    }, 1000);
   }
 });
