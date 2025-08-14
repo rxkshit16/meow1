@@ -12,9 +12,11 @@ candle.addEventListener('click', () => {
       origin: { y: 0.6 }
     });
 
-    // Redirect after short delay
+    // Ask for redirect
     setTimeout(() => {
-      window.location.href = "https://hbd-meow.netlify.app";
-    }, 1000);
+      if (confirm("🎁 Click OK for another surprise!")) {
+        window.location.href = "https://hbd-meow.netlify.app";
+      }
+    }, 500);
   }
 });
