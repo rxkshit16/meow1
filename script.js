@@ -6,7 +6,7 @@ candle.addEventListener('click', () => {
   if (clickCount === 3) {
     candle.classList.add('fade-out');
     setTimeout(() => {
-      candle.src = "images/candle-out.png";
+      candle.src = "https://ibb.co/5hTTWWTt";
       candle.classList.remove('fade-out');
     }, 500);
     confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
